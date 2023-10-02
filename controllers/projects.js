@@ -1,27 +1,27 @@
 const express = require('express');
 
 function create(req, res, next){
-    res.send('User create')
+    res.send('Project create')
 }
 
 function list(req, res, next) {
-    res.send('Users list');
+    res.send('Projects list');
 }
 
 function index(req, res, next){
-    res.send('User index')
+    res.send('Project index')
 }
 
 function replace(req, res, next){
-    res.send('User replace')
+    res.send('Project replace')
 }
 
 function update(req, res, next){
-    res.send('User update')
+    res.send('Project update')
 }
 
 function destroy(req, res, next){
-    res.send('User destroy')
+    res.send('Project destroy')
 }
 
 module.exports = {
