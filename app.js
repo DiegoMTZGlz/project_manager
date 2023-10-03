@@ -14,6 +14,7 @@ const permissionsRouter = require('./routes/permissions');
 const skillsRouter = require('./routes/skills');
 const backlogsRouter = require('./routes/backlogs');
 const storyCardsRouter = require('./routes/storyCards');
+const userRolesRouter = require('./routes/userRoles');
 
 const app = express();
 
@@ -37,6 +38,7 @@ app.use('/permissions', permissionsRouter);
 app.use('/skills', skillsRouter);
 app.use('/backlogs', backlogsRouter);
 app.use('/storyCards', storyCardsRouter);
+app.use('/userRoles', userRolesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
