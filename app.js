@@ -12,6 +12,7 @@ const socialsRouter = require('./routes/socials');
 const rolesRouter = require('./routes/roles');
 const permissionsRouter = require('./routes/permissions');
 const skillsRouter = require('./routes/skills')
+const skillsRouter = require('./routes/backlogs')
 
 const app = express();
 
@@ -33,6 +34,7 @@ app.use('/socials', socialsRouter);
 app.use('/roles', rolesRouter);
 app.use('/permissions', permissionsRouter);
 app.use('/skills', skillsRouter);
+app.use('/backlogs', skillsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controllers/socials');
+const controller = require('../controllers/backlogs');
 
 router.post('/', controller.create)
 
