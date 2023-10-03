@@ -16,29 +16,13 @@ Versión de express: 4.16.1
 
 # Autores
 
-**Daniel Josue Lozano Porras** 
+- **Daniel Josue Lozano Porras** - 348603 - [Daniel3486](https://gitlab.com/a348603)
 
-Usuario: Daniel3486
+- **Juan Antonio Díaz Fernández** - 348637 - [JUAN ANTONIO DIAZ FERNANDEZ](https://gitlab.com/a348637)
 
-Matricula: 348603
+- **Jocelyn Soto Avila** - 348687 - [JOCELYN SOTO AVILA](https://gitlab.com/a348687)
 
-**Juan Antonio Díaz Fernández**
-
-Usuario: JUAN ANTONIO DIAZ FERNANDEZ
-
-Matricula: 348637
-
-**Jocelyn Soto Avila**
-
-Usuario: JOCELYN SOTO AVILA
-
-Matricula: 348687
-
-**Diego Martinez**
-
-Usuario:DiegoMTZGlz
-
-Matricula:353198
+- **Diego Martínez González** - 353198 - [DiegoMTZGlz](https://github.com/DiegoMTZGlz)
 
 ## Instrucciones
 
@@ -74,6 +58,68 @@ Se espera como entregable la dirección del repositorio de gitlab con su respect
 
 ## Instrucciones de Usos
 
+1. Clonar el repositorio:
 
+```
+git clone git@gitlab.com:webdeads/project-manager.git
+```
+
+2. Esribir el siguiente comando, esto hará que se instalen las dependencias de node, y el `package-lock.json`:
+
+```
+npm install
+```
+
+3. Para ejecutar el servidor:
+
+```
+npm start
+```
+
+4. Dirigirse a su buscardor de confianza y en la barra de navegación colocar:
+
+```
+http://localhost:3000/
+```
+
+5. Si se quiere apagar el servidor: `Ctrl + C`
 
 ## Imagen de Docker
+
+Para ejectuarlo desde una imagen de docker
+
+1. Descargar la imagen de docker:
+
+```
+docker pull docker pull diegomtzglz/project_manager
+```
+
+2. Crear el contenedor:
+
+```
+docker create --name <nombre_contenedor> -p 3000:3000 diegomtzglz/project_manager
+```
+
+3. Iniciar el contenedor:
+
+```
+docker start <nombre_contenedor>
+```
+
+4. Pausar el contenedor:
+
+```
+docker stop <nombre_contenedor>
+```
+
+Para hacer los ultimos comandos en uno solo:
+
+```
+docker run -p 3000:3000 diegomtzglz/project_manager
+```
+
+Link de DockerHub:
+
+```
+https://hub.docker.com/r/diegomtzglz/project_manager
+```
