@@ -120,7 +120,7 @@ Link de DockerHub:
 https://hub.docker.com/r/diegomtzglz/project_manager
 ```
 
-## Descripcion del diagrama de clases
+## Descripción del Diagrama de Clases
 
 Los requisitos de la empresa han sido plasmados en los siguientes puntos:
     
@@ -152,23 +152,23 @@ Las palabras que estan dentro de un recuadro representan `clases` y las que esta
 
 ![diagramaDeClases](./Diagramas/project_challenge_web_platforms.jpg)
 
-## Diagrama de interacción
+## Descripción del Diagrama de Interacción
 
 La funcionalidad de la plataforma ha sido plasmada en el diagrama acorde a los siguientes puntos:
 
-• Creaciòn de:
+• Creación de:
 
-- Usuarios y sus roles
+- Usuarios y sus roles.
 
-- Proyectos con sus respectivos equipos
+- Proyectos con sus respectivos equipos.
 
-• Inicios de sesión
+• Inicios de sesión.
 
-• Creaciòn de tarjetas
+• Creaciòn de tarjetas.
 
-• Validaciòn o rechazo de tarjetas
+• Validación o rechazo de tarjetas.
 
-• Revisiòn de proyectos con sus respectivas tarjetas
+• Revisión de proyectos con sus respectivas tarjetas.
 
 `Diagrama de Interacción`
 
