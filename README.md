@@ -52,10 +52,6 @@ Para el primer parcial se evaluara lo siguiente:
 
 Se espera como entregable la dirección del repositorio de gitlab con su respectivo archivo readme que explique los diagramas anteriores y que contenga la documentación del proyecto. Cada miembro del equipo debe subir la liga del repositorio.
 
-## Funcionamiento
-
-
-
 ## Instrucciones de Usos
 
 1. Clonar el repositorio:
