@@ -151,3 +151,25 @@ Las palabras que estan dentro de un recuadro representan `clases` y las que esta
 `Diagrama de Clases`
 
 ![diagramaDeClases](./Diagramas/project_challenge_web_platforms.jpg)
+
+## Diagrama de interacción
+
+La funcionalidad de la plataforma ha sido plasmada en el diagrama acorde a los siguientes puntos:
+
+• Creaciòn de:
+
+- Usuarios y sus roles
+
+- Proyectos con sus respectivos equipos
+
+• Inicios de sesión
+
+• Creaciòn de tarjetas
+
+• Validaciòn o rechazo de tarjetas
+
+• Revisiòn de proyectos con sus respectivas tarjetas
+
+`Diagrama de Interacción`
+
+![diagramaDeInteracción](./Diagramas/Diagrama_de_interacciòn.jpg)
