@@ -152,6 +152,6 @@ SCRUM, el cual debe contar con el siguiente tablero de control:
 
 Las palabras que estan dentro de un recuadro representan `clases` y las que estan en negritas son **métodos**.
 
+`Diagrama de Clases`
 
-
-
+![diagramaDeClases](./Diagramas/project_challenge_web_platforms.jpg)
