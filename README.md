@@ -123,3 +123,35 @@ Link de DockerHub:
 ```
 https://hub.docker.com/r/diegomtzglz/project_manager
 ```
+
+## Descripcion del diagrama de clases
+
+Los requisitos de la empresa han sido plasmados en los siguientes puntos:
+    
+• La empresa requiere llevar los expedientes por `proyecto` de desarrollo con la siguiente
+    documentación y datos: **nombre del proyecto**, **fecha de solicitud de proyecto**, **fecha de
+    arranque del proyecto**, **descripción del proyecto**, `proyect manager` (scrum master), `product
+    owner` y su `equipo de desarrollo` involucrado.
+
+• Por cada miembro del equipo de desarrollo se requiere saber: **nombre completo**, **fecha
+    nacimiento**, **CURP**, **RFC**, **domicilio** y una **lista de habilidades**.
+
+• Las `habilidades` son ranqueadas por **junior, senior y master**. Por ejemplo Juan es un
+    desarrollador java nivel master pero javascript nivel junior
+    
+• Todos los `usuario` del sistema deben poder iniciar sesión en el sistema por medio de mínimo tres `redes sociales`.
+
+• Cada usuario cumple un `rol` dentro de un proyecto con diferentes `permisos`.
+
+Cada proyecto esta basado por estándar en la metodología de desarrollo de software ágil
+SCRUM, el cual debe contar con el siguiente tablero de control:
+    
+• Debe estar divido en las columnas `product backlog`, `release backlog` (varias por tableros), `sprint backlog` (varios por backlog).
+
+• Se debe poder cargar `tarjetas` o `historias de usuario`.
+
+Las palabras que estan dentro de un recuadro representan `clases` y las que estan en negritas son **métodos**.
+
+
+
+
