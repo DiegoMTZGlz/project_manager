@@ -1,5 +1,17 @@
 const mongoose = require('mongoose');
 
+const socialsSchema = mongoose.Schema({
+    _id: { type: mongoose.Schema.Types.ObjectId, auto: true},
+    type: { type: String, enum: ['FACEBOOK', 'GITHUB', 'GOOGLE']},
+    usernameSocial: String
+});
+
+const skillsSchema = mongoose.Schema({
+    _id: { type: mongoose.Schema.Types.ObjectId, auto: true},
+    skillName: String,
+    skillLevel: { type: String, enum: ['JUNIOR', 'SENIOR', 'MASTER']}    
+});
+
 const schema = mongoose.Schema({
     _username: String,
     _password: String,
@@ -9,14 +21,8 @@ const schema = mongoose.Schema({
     _birthdate: Date,
     _curp: String,
     _rfc: String,
-    _socials:[{
-        type: mongoose.Schema.ObjectId,
-        ref: 'Social'
-    }],
-    _skills: [{
-        type: mongoose.Schema.ObjectId,
-        ref: 'Skill'
-    }],
+    _socials:[socialsSchema],
+    _skills: [skillsSchema],
     _address: {
         street: String,
         number: String,

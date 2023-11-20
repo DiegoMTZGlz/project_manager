@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const config = require('config');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -15,8 +16,22 @@ const skillsRouter = require('./routes/skills');
 const backlogsRouter = require('./routes/backlogs');
 const storyCardsRouter = require('./routes/storyCards');
 const userRolesRouter = require('./routes/userRoles');
+const mongoose = require('mongoose');
 
 const app = express();
+
+const url = config.get("dbConnection");
+mongoose.connect(url);
+
+const db = mongoose.connection;
+
+db.on('open', ()=>{
+  console.log('Conexión con la base de datos exitosa.');
+});
+
+db.on('error', ()=>{
+  console.log('Error al conectar con la base de datos.');
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
