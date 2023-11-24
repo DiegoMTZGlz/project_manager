@@ -56,7 +56,7 @@ async function create(req, res, next){
     });
 
     user.save().then(obj => res.status(200).json({
-        msg: 'Usuario creado correctamente',
+        msg: res_,
         obj: obj
     })).catch(ex => res.status(500).json({
         msg:'Error al crear usuario',
