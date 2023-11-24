@@ -1,3 +1,3 @@
 {
-    "dbConnection": "mongodb+srv://webdeads:1234@project-manager.yyqqiif.mongodb.net/project-manager"
+    "dbConnection": "mongodb://localhost:27017/project-manager"
 }
