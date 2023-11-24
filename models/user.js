@@ -31,11 +31,12 @@ const schema = mongoose.Schema({
         city: String,
         state: String,
         country: String
-    }
+    },
+    _role: String
 });
 
 class User {
-    constructor(username, password, salt, name, lastName, birthdate, curp, rfc, socials, skills, address){
+    constructor(username, password, salt, name, lastName, birthdate, curp, rfc, socials, skills, address, role){
         this._username = username;
         this._password = password;
         this._salt = salt;
@@ -47,6 +48,7 @@ class User {
         this._socials = socials;
         this._skills = skills;
         this._address = address;
+        this._role = role;
     }   
 
     get username(){ return this._username; }
@@ -81,6 +83,9 @@ class User {
 
     get address() { return this._address }
     set address(v) { this._address = v; }
+
+    get role() { return this._role }
+    set role(v) { this._role = v; }
 }
 
 schema.loadClass(User);
