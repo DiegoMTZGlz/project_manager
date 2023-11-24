@@ -1,5 +1,5 @@
 {
-    "users.create.ok": "User created successfully",
+	"users.create.ok": "User created successfully",
 	"users.create.wrong": "Unable to create user",
 	"users.list.ok": "Users list",
 	"users.list.wrong": "Unable to display users list",
@@ -10,5 +10,10 @@
 	"users.update.ok": "User updated successfully",
 	"users.update.wrong": "Unable to update the user with id: ",
 	"users.destroy.ok": "Successfully deleted the user with id: ",
-	"users.destroy.wrong": "Unable to destroy the user with id: "
+	"users.destroy.wrong": "Unable to destroy the user with id: ",
+	"roles.create.ok": "roles.create.ok",
+	"roles.list.ok": "roles.list.ok",
+	"roles.replace.ok": "roles.replace.ok",
+	"roles.update.ok": "roles.update.ok",
+	"roles.destroy.ok": "roles.destroy.ok"
 }
