@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate-v2');
 
 const schema = mongoose.Schema({
     _projectName: String,
@@ -85,4 +86,6 @@ class Project {
 }
 
 schema.loadClass(Project);
+schema.plugin(mongoosePaginate);
+
 module.exports = mongoose.model('Project', schema);

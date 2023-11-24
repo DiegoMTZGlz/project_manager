@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate-v2');
 
 const schema = mongoose.Schema({
     _usernameList:[{
@@ -17,4 +18,6 @@ class Team {
 }
 
 schema.loadClass(Team);
+schema.plugin(mongoosePaginate);
+
 module.exports = mongoose.model('Team', schema);

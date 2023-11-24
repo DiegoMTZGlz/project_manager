@@ -11,6 +11,7 @@ async function create(req, res, next){
     let birthdate = req.body.birthdate;
     let curp = req.body.curp;
     let rfc = req.body.rfc;
+    let role = req.body.role;
 
     let socials = []
     for (let i = 0; req.body[`socials[${i}][type]`]; i++) {
@@ -52,20 +53,32 @@ async function create(req, res, next){
         rfc: rfc,
         socials: socials,
         skills: skills,
-        address: address
+        address: address,
+        role: role
     });
 
     user.save().then(obj => res.status(200).json({
-        msg: res_,
+        msg: res._('users.create.ok'),
         obj: obj
     })).catch(ex => res.status(500).json({
-        msg:'Error al crear usuario',
+        msg: res.__('users.create.wrong'),
         obj: ex
     }));
 }
 
 function list(req, res, next) {
-    res.send('Users list');
+    let page = req.params.page? req.params.page :1;
+    const options = {
+        page: page,
+        limit: 5
+    };
+    User.paginate({},options).then(objs => res.status(200).json({
+        msg: res.__('users.list.ok'),
+        obj: objs
+    })).catch(ex => res.status(500).json({
+        msg: res.__('users.list.wrong'),
+        obj: ex
+    }));
 }
 
 function index(req, res, next){

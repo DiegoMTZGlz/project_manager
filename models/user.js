@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate-v2');
 
 const socialsSchema = mongoose.Schema({
     _id: { type: mongoose.Schema.Types.ObjectId, auto: true},
@@ -89,4 +90,6 @@ class User {
 }
 
 schema.loadClass(User);
+schema.plugin(mongoosePaginate);
+
 module.exports = mongoose.model('User', schema);

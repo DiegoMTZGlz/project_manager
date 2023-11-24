@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const mongoosePaginate = require('mongoose-paginate-v2');
 
 const schema = mongoose.Schema({
     _storyCardList: [{
@@ -17,4 +18,6 @@ class Backlog {
 }
 
 schema.loadClass(Backlog);
+schema.plugin(mongoosePaginate);
+
 module.exports = mongoose.model('Backlog', schema);
