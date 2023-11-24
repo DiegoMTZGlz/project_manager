@@ -1,0 +1,14 @@
+{
+    "users.create.ok": "User created successfully",
+	"users.create.wrong": "Unable to create user",
+	"users.list.ok": "Users list",
+	"users.list.wrong": "Unable to display users list",
+	"users.index.ok": "Displaying the user with id: ",
+	"users.index.wrong": "Unable to display the user with id: ",
+	"users.replace.ok": "Successfully replaced the user with id: ",
+	"users.replace.wrong": "Unable to replace the user with id: ",
+	"users.update.ok": "User updated successfully",
+	"users.update.wrong": "Unable to update the user with id: ",
+	"users.destroy.ok": "Successfully deleted the user with id: ",
+	"users.destroy.wrong": "Unable to destroy the user with id: "
+}
