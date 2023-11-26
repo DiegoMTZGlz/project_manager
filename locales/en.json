@@ -16,5 +16,10 @@
 	"roles.replace.ok": "roles.replace.ok",
 	"roles.update.ok": "roles.update.ok",
 	"roles.destroy.ok": "roles.destroy.ok",
-	"storyCards.create.ok": "storyCards.create.ok"
+	"storyCards.create.ok": "storyCards.create.ok",
+	"storyCards.list.ok": "storyCards.list.ok",
+	"storyCards.index.ok": "storyCards.index.ok",
+	"storyCards.replace.ok": "storyCards.replace.ok",
+	"storyCards.update.ok": "storyCards.update.ok",
+	"storyCards.destroy.ok": "storyCards.destroy.ok"
 }

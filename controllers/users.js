@@ -102,15 +102,7 @@ async function replace(req, res, next){
     let birthdate = req.body.birthdate ? req.body.birthdate : "";
     let curp = req.body.curp ? req.body.curp : "";
     let rfc = req.body.rfc ? req.body.rfc : "";
-    let role = req.body.role ? req.body.role : "";
-
-    let roles = []
-    for (let i = 0; req.body[`roles[${i}][role]`]; i++) {
-        let role = {
-            role: req.body[`roles[${i}][role]`] ? req.body[`roles[${i}][role]`] : "",
-        };
-        roles.push(role);
-    }
+    let roles = req.body.roles ? req.body.roles : "";
 
     let socials = []
     for (let i = 0; req.body[`socials[${i}][type]`]; i++) {
@@ -176,15 +168,7 @@ async function update(req, res, next){
     let birthdate = req.body.birthdate;
     let curp = req.body.curp;
     let rfc = req.body.rfc;
-    let role = req.body.role;
-
-    let roles = []
-    for (let i = 0; req.body[`roles[${i}][role]`]; i++) {
-        let role = {
-            role: req.body[`roles[${i}][role]`],
-        };
-        roles.push(role);
-    }
+    let roles = req.body.roles;
 
     let socials = []
     for (let i = 0; req.body[`socials[${i}][type]`]; i++) {
