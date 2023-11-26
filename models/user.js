@@ -1,11 +1,6 @@
 const mongoose = require('mongoose');
 const mongoosePaginate = require('mongoose-paginate-v2');
 
-const rolesSchema = mongoose.Schema({
-    _id: { type: mongoose.Schema.Types.ObjectId, auto: true},
-    role: { type: String, enum: ['CRUD', 'CREATE', 'READ', 'UPDATE', 'DELETE']},
-});
-
 const socialsSchema = mongoose.Schema({
     _id: { type: mongoose.Schema.Types.ObjectId, auto: true},
     type: { type: String, enum: ['FACEBOOK', 'GITHUB', 'GOOGLE']},
@@ -38,7 +33,9 @@ const schema = mongoose.Schema({
         state: String,
         country: String
     },
-    _roles: [rolesSchema]
+    _roles: [{
+            type: String
+    }]
 });
 
 class User {

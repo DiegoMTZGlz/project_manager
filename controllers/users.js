@@ -11,14 +11,7 @@ async function create(req, res, next){
     let birthdate = req.body.birthdate;
     let curp = req.body.curp;
     let rfc = req.body.rfc;
-
-    let roles = []
-    for (let i = 0; req.body[`roles[${i}][role]`]; i++) {
-        let role = {
-            role: req.body[`roles[${i}][role]`],
-        };
-        roles.push(role);
-    }
+    let roles = req.body.roles;
 
     let socials = []
     for (let i = 0; req.body[`socials[${i}][type]`]; i++) {
