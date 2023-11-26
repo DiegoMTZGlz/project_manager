@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 const mongoosePaginate = require('mongoose-paginate-v2');
 
+const rolesSchema = mongoose.Schema({
+    _id: { type: mongoose.Schema.Types.ObjectId, auto: true},
+    role: { type: String, enum: ['CRUD', 'CREATE', 'READ', 'UPDATE', 'DELETE']},
+});
+
 const socialsSchema = mongoose.Schema({
     _id: { type: mongoose.Schema.Types.ObjectId, auto: true},
     type: { type: String, enum: ['FACEBOOK', 'GITHUB', 'GOOGLE']},
@@ -22,7 +27,7 @@ const schema = mongoose.Schema({
     _birthdate: Date,
     _curp: String,
     _rfc: String,
-    _socials:[socialsSchema],
+    _socials: [socialsSchema],
     _skills: [skillsSchema],
     _address: {
         street: String,
@@ -33,11 +38,11 @@ const schema = mongoose.Schema({
         state: String,
         country: String
     },
-    _role: String
+    _roles: [rolesSchema]
 });
 
 class User {
-    constructor(username, password, salt, name, lastName, birthdate, curp, rfc, socials, skills, address, role){
+    constructor(username, password, salt, name, lastName, birthdate, curp, rfc, socials, skills, address, roles){
         this._username = username;
         this._password = password;
         this._salt = salt;
@@ -49,7 +54,7 @@ class User {
         this._socials = socials;
         this._skills = skills;
         this._address = address;
-        this._role = role;
+        this._roles = roles;
     }   
 
     get username(){ return this._username; }
@@ -85,8 +90,8 @@ class User {
     get address() { return this._address }
     set address(v) { this._address = v; }
 
-    get role() { return this._role }
-    set role(v) { this._role = v; }
+    get roles() { return this._roles }
+    set roles(v) { this._roles = v; }
 }
 
 schema.loadClass(User);

@@ -11,7 +11,14 @@ async function create(req, res, next){
     let birthdate = req.body.birthdate;
     let curp = req.body.curp;
     let rfc = req.body.rfc;
-    let role = req.body.role;
+
+    let roles = []
+    for (let i = 0; req.body[`roles[${i}][role]`]; i++) {
+        let role = {
+            role: req.body[`roles[${i}][role]`],
+        };
+        roles.push(role);
+    }
 
     let socials = []
     for (let i = 0; req.body[`socials[${i}][type]`]; i++) {
@@ -54,11 +61,11 @@ async function create(req, res, next){
         socials: socials,
         skills: skills,
         address: address,
-        role: role
+        roles: roles
     });
 
     user.save().then(obj => res.status(200).json({
-        msg: res._('users.create.ok'),
+        msg: res.__('users.create.ok'),
         obj: obj
     })).catch(ex => res.status(500).json({
         msg: res.__('users.create.wrong'),
@@ -104,6 +111,14 @@ async function replace(req, res, next){
     let rfc = req.body.rfc ? req.body.rfc : "";
     let role = req.body.role ? req.body.role : "";
 
+    let roles = []
+    for (let i = 0; req.body[`roles[${i}][role]`]; i++) {
+        let role = {
+            role: req.body[`roles[${i}][role]`] ? req.body[`roles[${i}][role]`] : "",
+        };
+        roles.push(role);
+    }
+
     let socials = []
     for (let i = 0; req.body[`socials[${i}][type]`]; i++) {
         let social = {
@@ -145,7 +160,7 @@ async function replace(req, res, next){
         _socials: socials,
         _skills: skills,
         _address: address,
-        _role: role
+        _roles: roles
     });
 
     User.findOneAndUpdate({"_id":id}, user, {new: true}).then(obj => res.status(200).json({
@@ -169,6 +184,14 @@ async function update(req, res, next){
     let curp = req.body.curp;
     let rfc = req.body.rfc;
     let role = req.body.role;
+
+    let roles = []
+    for (let i = 0; req.body[`roles[${i}][role]`]; i++) {
+        let role = {
+            role: req.body[`roles[${i}][role]`],
+        };
+        roles.push(role);
+    }
 
     let socials = []
     for (let i = 0; req.body[`socials[${i}][type]`]; i++) {
@@ -211,7 +234,7 @@ async function update(req, res, next){
         if (socials) user._socials = socials;
         if (skills) user._skills = skills;
         if (address) user._address = address;
-        if (role) user._role = role;
+        if (roles) user._roles = roles;
 
     User.findOneAndUpdate({"_id":id}, user).then(obj => res.status(200).json({
         msg: res.__('users.update.ok'),
