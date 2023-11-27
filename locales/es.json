@@ -1,4 +1,7 @@
 {
+	"login.ok":"Sesion iniciada correctamente",
+	"login.wrong":"Usuario y/o contraseña incorrectos",
+
     "users.create.ok": "Usuario creado exitosamente",
 	"users.create.wrong": "No fue posible crear usuario",
 	"users.list.ok": "Lista de usuarios",
@@ -10,5 +13,78 @@
 	"users.update.ok": "Usuario actualizado exitosamente",
 	"users.update.wrong": "No fue posible actualizar usuario con id: ",
     "users.destroy.ok": "Se eliminó exitosamente el usuario con id: ",
-    "users.destroy.wrong": "No fue posible eliminar el usuario con id: "
+    "users.destroy.wrong": "No fue posible eliminar el usuario con id: ",
+
+	"backlogs.create.ok": "Backlog creado exitosamente",
+	"backlogs.create.wrong": "No fue posible crear el backlog",
+	"backlogs.list.ok": "Lista de backlogs",
+	"backlogs.list.wrong": "No fue posible mostrar la lista de backlogs",
+	"backlogs.index.ok": "Mostrando backlog con id: ",
+	"backlogs.index.wrong": "No fue posible mostrar el backlog con id: ",
+	"backlogs.replace.ok": "Se reemplazó exitosamente el backlog con id: ",
+	"backlogs.replace.wrong": "No fue posible reemplazar el backlog con id: ",
+	"backlogs.update.ok": "Backlog actualizado exitosamente",
+	"backlogs.update.wrong": "No fue posible actualizar el backlog con id: ",
+	"backlogs.destroy.ok": "Se eliminó exitosamente el backlog con id: ",
+	"backlogs.destroy.wrong": "No fue posible eliminar el backlog con id: ",
+
+	"projects.create.ok": "Proyecto creado exitosamente",
+	"projects.create.wrong": "No fue posible crear el proyecto",
+	"projects.list.ok": "Lista de proyectos",
+	"projects.list.wrong": "No fue posible mostrar la lista de proyectos",
+	"projects.index.ok": "Mostrando proyecto con id: ",
+	"projects.index.wrong": "No fue posible mostrar el proyecto con id: ",
+	"projects.replace.ok": "Se reemplazó exitosamente el proyecto con id: ",
+	"projects.replace.wrong": "No fue posible reemplazar el proyecto con id: ",
+	"projects.update.ok": "Proyecto actualizado exitosamente",
+	"projects.update.wrong": "No fue posible actualizar el proyecto con id: ",
+	"projects.destroy.ok": "Se eliminó exitosamente el proyecto con id: ",
+	"projects.destroy.wrong": "No fue posible eliminar el proyecto con id: ",
+
+	"roles.create.ok": "Rol creado exitosamente",
+	"roles.create.wrong": "No fue posible crear el rol",
+	"roles.list.ok": "Lista de roles",
+	"roles.list.wrong": "No fue posible mostrar la lista de roles",
+	"roles.index.ok": "Mostrando rol con id: ",
+	"roles.index.wrong": "No fue posible mostrar el rol con id: ",
+	"roles.replace.ok": "Se reemplazó exitosamente el rol con id: ",
+	"roles.replace.wrong": "No fue posible reemplazar el rol con id: ",
+	"roles.update.ok": "Rol actualizado exitosamente",
+	"roles.update.wrong": "No fue posible actualizar el rol con id: ",
+	"roles.destroy.ok": "Se eliminó exitosamente el rol con id: ",
+	"roles.destroy.wrong": "No fue posible eliminar el rol con id: ",
+
+	"storyCards.create.ok": "Story Card creado exitosamente",
+	"storyCards.create.wrong": "No fue posible crear la Story Card",
+	"storyCards.list.ok": "Lista de Story Cards",
+	"storyCards.list.wrong": "No fue posible mostrar la lista de Story Cards",
+	"storyCards.index.ok": "Mostrando Story Card con id: ",
+	"storyCards.index.wrong": "No fue posible mostrar la Story Card con id: ",
+	"storyCards.replace.ok": "Se reemplazó exitosamente la Story Card con id: ",
+	"storyCards.replace.wrong": "No fue posible reemplazar la Story Card con id: ",
+	"storyCards.update.ok": "Story Card actualizada exitosamente",
+	"storyCards.update.wrong": "No fue posible actualizar la Story Card con id: ",
+	"storyCards.destroy.ok": "Se eliminó exitosamente la Story Card con id: ",
+	"storyCards.destroy.wrong": "No fue posible eliminar la Story Card con id: ",
+
+	"teams.create.ok": "Equipo creado exitosamente",
+	"teams.create.wrong": "No fue posible crear el equipo",
+	"teams.list.ok": "Lista de equipos",
+	"teams.list.wrong": "No fue posible mostrar la lista de equipos",
+	"teams.index.ok": "Mostrando equipo con id: ",
+	"teams.index.wrong": "No fue posible mostrar el equipo con id: ",
+	"teams.replace.ok": "Se reemplazó exitosamente el equipo con id: ",
+	"teams.replace.wrong": "No fue posible reemplazar el equipo con id: ",
+	"teams.update.ok": "Equipo actualizado exitosamente",
+	"teams.update.wrong": "No fue posible actualizar el equipo con id: ",
+	"teams.destroy.ok": "Se eliminó exitosamente el equipo con id: ",
+	"teams.destroy.wrong": "No fue posible eliminar el equipo con id: "
+
+
+
+
+
+
+	
+
 }

@@ -1,4 +1,7 @@
 {
+	"login.ok":"Login success",
+	"login.wrong":"User or password was wrong",
+
 	"users.create.ok": "User created successfully",
 	"users.create.wrong": "Unable to create user",
 	"users.list.ok": "Users list",
@@ -11,15 +14,76 @@
 	"users.update.wrong": "Unable to update the user with id: ",
 	"users.destroy.ok": "Successfully deleted the user with id: ",
 	"users.destroy.wrong": "Unable to destroy the user with id: ",
-	"roles.create.ok": "roles.create.ok",
-	"roles.list.ok": "roles.list.ok",
-	"roles.replace.ok": "roles.replace.ok",
-	"roles.update.ok": "roles.update.ok",
-	"roles.destroy.ok": "roles.destroy.ok",
-	"storyCards.create.ok": "storyCards.create.ok",
-	"storyCards.list.ok": "storyCards.list.ok",
-	"storyCards.index.ok": "storyCards.index.ok",
-	"storyCards.replace.ok": "storyCards.replace.ok",
-	"storyCards.update.ok": "storyCards.update.ok",
-	"storyCards.destroy.ok": "storyCards.destroy.ok"
+
+	"backlogs.create.ok": "Backlog created successfully",
+	"backlogs.create.wrong": "Unable to create backlog",
+	"backlogs.list.ok": "Backlogs list",
+	"backlogs.list.wrong": "Unable to display backlogs list",
+	"backlogs.index.ok": "Displaying the backlog with id: ",
+	"backlogs.index.wrong": "Unable to display the backlog with id: ",
+	"backlogs.replace.ok": "Successfully replaced the backlog with id: ",
+	"backlogs.replace.wrong": "Unable to replace the backlog with id: ",
+	"backlogs.update.ok": "Backlog updated successfully",
+	"backlogs.update.wrong": "Unable to update the backlog with id: ",
+	"backlogs.destroy.ok": "Successfully deleted the backlog with id: ",
+	"backlogs.destroy.wrong": "Unable to destroy the backlog with id: ",
+
+	"projects.create.ok": "Project created successfully",
+	"projects.create.wrong": "Unable to create the project",
+	"projects.list.ok": "Projects list",
+	"projects.list.wrong": "Unable to display projects list",
+	"projects.index.ok": "Displaying the project with id: ",
+	"projects.index.wrong": "Unable to display the project with id: ",
+	"projects.replace.ok": "Successfully replaced the project with id: ",
+	"projects.replace.wrong": "Unable to replace the project with id: ",
+	"projects.update.ok": "Project updated successfully",
+	"projects.update.wrong": "Unable to update the project with id: ",
+	"projects.destroy.ok": "Successfully deleted the project with id: ",
+	"projects.destroy.wrong": "Unable to destroy the project with id: ",
+
+	"roles.create.ok": "Role created successfully",
+	"roles.create.wrong": "Unable to create the role",
+	"roles.list.ok": "Roles list",
+	"roles.list.wrong": "Unable to display roles list",
+	"roles.index.ok": "Displaying the role with id: ",
+	"roles.index.wrong": "Unable to display the role with id: ",
+	"roles.replace.ok": "Successfully replaced the role with id: ",
+	"roles.replace.wrong": "Unable to replace the role with id: ",
+	"roles.update.ok": "Role updated successfully",
+	"roles.update.wrong": "Unable to update the role with id: ",
+	"roles.destroy.ok": "Successfully deleted the role with id: ",
+	"roles.destroy.wrong": "Unable to destroy the role with id: ",
+
+	"storyCards.create.ok": "Story Card created successfully",
+	"storyCards.create.wrong": "Unable to create the Story Card",
+	"storyCards.list.ok": "Story Cards list",
+	"storyCards.list.wrong": "Unable to display Story Cards list",
+	"storyCards.index.ok": "Displaying the Story Card with id: ",
+	"storyCards.index.wrong": "Unable to display the Story Card with id: ",
+	"storyCards.replace.ok": "Successfully replaced the Story Card with id: ",
+	"storyCards.replace.wrong": "Unable to replace the Story Card with id: ",
+	"storyCards.update.ok": "Story Card updated successfully",
+	"storyCards.update.wrong": "Unable to update the Story Card with id: ",
+	"storyCards.destroy.ok": "Successfully deleted the Story Card with id: ",
+	"storyCards.destroy.wrong": "Unable to destroy the Story Card with id: ",
+
+	"teams.create.ok": "Team created successfully",
+	"teams.create.wrong": "Unable to create the team",
+	"teams.list.ok": "Teams list",
+	"teams.list.wrong": "Unable to display teams list",
+	"teams.index.ok": "Displaying the team with id: ",
+	"teams.index.wrong": "Unable to display the team with id: ",
+	"teams.replace.ok": "Successfully replaced the team with id: ",
+	"teams.replace.wrong": "Unable to replace the team with id: ",
+	"teams.update.ok": "Team updated successfully",
+	"teams.update.wrong": "Unable to update the team with id: ",
+	"teams.destroy.ok": "Successfully deleted the team with id: ",
+	"teams.destroy.wrong": "Unable to destroy the team with id: "
+
+
+
+
+
+
+	
 }
