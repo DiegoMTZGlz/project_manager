@@ -1,3 +1,6 @@
 {
+    "secret":{
+        "key":"13641c2867a5c5278d948187c0b75cb2"
+    },
     "dbConnection": "mongodb://localhost:27017/project-manager-test"
 }
