@@ -78,6 +78,7 @@ function update(req, res, next){
 
 function destroy(req, res, next){
     const id = req.params.id;
+    
     Team.findByIdAndDelete({"_id":id}).then(obj => res.status(200).json({
         msg: res.__('teams.destroy.ok')+`${id}`,
         obj: obj

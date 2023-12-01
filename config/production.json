@@ -1,3 +1,6 @@
 {
+    "secret":{
+        "key":"13641c2867a5c5278d948187c0b75cb1"
+    },
     "dbConnection": "mongodb+srv://webdeads:1234@project-manager.yyqqiif.mongodb.net/project-manager"
 }

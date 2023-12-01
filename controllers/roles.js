@@ -78,6 +78,7 @@ function update(req, res, next){
 
 function destroy(req, res, next){
     const id = req.params.id;
+    
     Role.findByIdAndDelete({"_id":id}).then(obj => res.status(200).json({
         msg: res.__('roles.destroy.ok')+`${id}`,
         obj: obj

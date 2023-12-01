@@ -78,13 +78,7 @@
 	"teams.update.ok": "Equipo actualizado exitosamente",
 	"teams.update.wrong": "No fue posible actualizar el equipo con id: ",
 	"teams.destroy.ok": "Se eliminó exitosamente el equipo con id: ",
-	"teams.destroy.wrong": "No fue posible eliminar el equipo con id: "
+	"teams.destroy.wrong": "No fue posible eliminar el equipo con id: ",
 
-
-
-
-
-
-	
-
+	"auth.login.unauthorized": "Sin autorización"
 }

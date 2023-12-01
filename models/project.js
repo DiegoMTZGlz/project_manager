@@ -18,10 +18,6 @@ const schema = mongoose.Schema({
         type:mongoose.Schema.ObjectId,
         ref:'Team'
     },
-    _userRoles: [{
-        type:mongoose.Schema.ObjectId,
-        ref:'UserRole'
-    }],
     _productBacklog: {
         type:mongoose.Schema.ObjectId,
         ref:'Backlog'
@@ -37,7 +33,7 @@ const schema = mongoose.Schema({
 });
 
 class Project {
-    constructor(projectName, projectRequestDate, projectStartDate, projectDescription, projectManager, projectOwner, team, userRoles,productBacklog, releaseBacklog, sprintBacklog){
+    constructor(projectName, projectRequestDate, projectStartDate, projectDescription, projectManager, projectOwner, team, productBacklog, releaseBacklog, sprintBacklog){
         this._projectName = projectName;
         this._projectRequestDate = projectRequestDate;
         this._projectStartDate = projectStartDate;
@@ -45,7 +41,6 @@ class Project {
         this._projectManager = projectManager;
         this._projectOwner = projectOwner;
         this._team = team;
-        this._userRoles = userRoles;
         this._productBacklog = productBacklog;
         this._releaseBacklog = releaseBacklog;
         this._sprintBacklog = sprintBacklog;
@@ -71,10 +66,7 @@ class Project {
 
     get team(){ return this._team; }
     set team(v){ this._team = v; }
-
-    get userRoles(){ return this._userRoles; }
-    set userRoles(v){ this._userRoles = v; }
-
+    
     get productBacklog(){ return this._productBacklog; }
     set productBacklog(v){ this._productBacklog = v; }
 

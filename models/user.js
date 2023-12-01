@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const mongoosePaginate = require('mongoose-paginate-v2');
 
+const enumUser = ['ADMIN', 'MEMBER'];
+
 const socialsSchema = mongoose.Schema({
     _id: { type: mongoose.Schema.Types.ObjectId, auto: true},
     type: { type: String, enum: ['FACEBOOK', 'GITHUB', 'GOOGLE']},
@@ -33,13 +35,14 @@ const schema = mongoose.Schema({
         state: String,
         country: String
     },
-    _roles: [{
-            type: String
-    }]
+    _role: {
+        type:String,
+        enum: enumUser
+    }
 });
 
 class User {
-    constructor(username, password, salt, name, lastName, birthdate, curp, rfc, socials, skills, address, roles){
+    constructor(username, password, salt, name, lastName, birthdate, curp, rfc, socials, skills, address, role){
         this._username = username;
         this._password = password;
         this._salt = salt;
@@ -51,7 +54,7 @@ class User {
         this._socials = socials;
         this._skills = skills;
         this._address = address;
-        this._roles = roles;
+        this._role = role;
     }   
 
     get username(){ return this._username; }
@@ -87,8 +90,8 @@ class User {
     get address() { return this._address }
     set address(v) { this._address = v; }
 
-    get roles() { return this._roles }
-    set roles(v) { this._roles = v; }
+    get role() { return this._role }
+    set role(v) { this._role = v; }
 }
 
 schema.loadClass(User);

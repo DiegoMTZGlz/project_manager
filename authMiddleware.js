@@ -4,6 +4,11 @@ const Role = require('./models/role');
 
 const authMiddleware = (source, typePermissions) => async (req, res, next) => {
     const authService = new Auth();
+    let authorizationHeader = req.get('Authorization');
+
+    if (!authorizationHeader) {
+      return res.status(401).send('Unauthorized');
+    }
     let userPayload = authService.check(req.get('Authorization').split(' ')[1]);
     const user = await User.findById(userPayload.data);
     const role = await Role.findOne({_name:user._role});
@@ -11,7 +16,7 @@ const authMiddleware = (source, typePermissions) => async (req, res, next) => {
         next();
     } else {
         res.status(401).json({
-            message: "No autorizado",
+            message: res.__('auth.login.unauthorized'),
             obj:null
         });
     }

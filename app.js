@@ -6,10 +6,6 @@ const logger = require('morgan');
 const config = require('config');
 const i18n = require('i18n');
 const mongoose = require('mongoose');
-const { expressjwt } = require('express-jwt');
-
-const JwtKey = config.get("secret.key");
-
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -51,9 +47,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(i18n.init);
-
-/*app.use(expressjwt({secret:JwtKey, algorithms:['HS256']}).unless({path:['/login']}));
-*/
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

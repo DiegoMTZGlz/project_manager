@@ -78,12 +78,7 @@
 	"teams.update.ok": "Team updated successfully",
 	"teams.update.wrong": "Unable to update the team with id: ",
 	"teams.destroy.ok": "Successfully deleted the team with id: ",
-	"teams.destroy.wrong": "Unable to destroy the team with id: "
+	"teams.destroy.wrong": "Unable to destroy the team with id: ",
 
-
-
-
-
-
-	
+	"auth.login.unauthorized": "Unauthorized"
 }

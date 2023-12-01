@@ -2,7 +2,7 @@ const express = require('express');
 const Backlog = require('../models/backlog');
 
 function create(req, res, next){
-    let storyCardList = req.body.storyCardList
+    let storyCardList = req.body.storyCardList;
 
     let backlog = new Backlog({
         storyCardList: storyCardList
@@ -64,8 +64,8 @@ function update(req, res, next){
     const id = req.params.id;
     let storyCardList = req.body.storyCardList;
 
-    const backlog = new Object()
-        if (storyCardList) backlog._storyCardList = storyCardList;
+    const backlog = new Object();
+    if (storyCardList) backlog._storyCardList = storyCardList;
 
     Backlog.findOneAndUpdate({"_id":id}, backlog).then(obj => res.status(200).json({
         msg: res.__('backlogs.update.ok'),
@@ -78,6 +78,7 @@ function update(req, res, next){
 
 function destroy(req, res, next){
     const id = req.params.id;
+    
     Backlog.findByIdAndDelete({"_id":id}).then(obj => res.status(200).json({
         msg: res.__('backlogs.destroy.ok')+`${id}`,
         obj: obj

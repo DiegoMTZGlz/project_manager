@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const config = require('config');
 
 class Auth {
     constructor(){
@@ -8,7 +9,7 @@ class Auth {
         Auth.instance = this;
         return this;
     }
-    JwtKey = "57a48587453fd4e544b8e3f2db8d2ca9";
+    JwtKey = config.get("secret.key");
 
     check(token) {
         return jwt.verify(token, this.JwtKey);

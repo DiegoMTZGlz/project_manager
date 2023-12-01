@@ -11,7 +11,7 @@ async function create(req, res, next){
     let birthdate = req.body.birthdate;
     let curp = req.body.curp;
     let rfc = req.body.rfc;
-    let roles = req.body.roles;
+    let role = req.body.role;
 
     let socials = []
     for (let i = 0; req.body[`socials[${i}][type]`]; i++) {
@@ -54,7 +54,7 @@ async function create(req, res, next){
         socials: socials,
         skills: skills,
         address: address,
-        roles: roles
+        role: role
     });
 
     user.save().then(obj => res.status(200).json({
@@ -102,7 +102,7 @@ async function replace(req, res, next){
     let birthdate = req.body.birthdate ? req.body.birthdate : "";
     let curp = req.body.curp ? req.body.curp : "";
     let rfc = req.body.rfc ? req.body.rfc : "";
-    let roles = req.body.roles ? req.body.roles : "";
+    let role = req.body.role ? req.body.role : "";
 
     let socials = []
     for (let i = 0; req.body[`socials[${i}][type]`]; i++) {
@@ -145,7 +145,7 @@ async function replace(req, res, next){
         _socials: socials,
         _skills: skills,
         _address: address,
-        _roles: roles
+        _roles: role
     });
 
     User.findOneAndUpdate({"_id":id}, user, {new: true}).then(obj => res.status(200).json({
@@ -168,7 +168,7 @@ async function update(req, res, next){
     let birthdate = req.body.birthdate;
     let curp = req.body.curp;
     let rfc = req.body.rfc;
-    let roles = req.body.roles;
+    let role = req.body.role;
 
     let socials = []
     for (let i = 0; req.body[`socials[${i}][type]`]; i++) {
@@ -211,7 +211,7 @@ async function update(req, res, next){
         if (socials) user._socials = socials;
         if (skills) user._skills = skills;
         if (address) user._address = address;
-        if (roles) user._roles = roles;
+        if (role) user._roles = role;
 
     User.findOneAndUpdate({"_id":id}, user).then(obj => res.status(200).json({
         msg: res.__('users.update.ok'),
@@ -224,6 +224,7 @@ async function update(req, res, next){
 
 function destroy(req, res, next){
     const id = req.params.id;
+
     User.findByIdAndDelete({"_id":id}).then(obj => res.status(200).json({
         msg: res.__('users.destroy.ok')+`${id}`,
         obj: obj

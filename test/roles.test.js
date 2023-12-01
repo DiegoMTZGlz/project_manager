@@ -7,7 +7,7 @@ let token;
 beforeAll((done) => {
     supertest(app)
         .post("/login")
-        .send({ "username": "fuan200", "password": "muy_secreto" })
+        .send({ "username": "fuan200", "password": "fuan200" })
         .expect(200)
         .end((err, res) => {
             if (err) return done(err);
