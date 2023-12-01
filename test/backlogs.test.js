@@ -3,10 +3,23 @@ const supertest = require('supertest');
 
 const app = require('../app');
 
+let token;
+beforeAll((done) => {
+    supertest(app)
+        .post("/login")
+        .send({ "username": "fuan200", "password": "muy_secreto" })
+        .expect(200)
+        .end((err, res) => {
+            if (err) return done(err);
+            token = res.body.obj;
+            done();
+        });
+});
+
 describe("Probar create de backlog", () => {
     it("Deberia de crear un backlog", (done) => {
-        supertest(app).post('/backlogs')
-        .send({})
+        supertest(app).post('/backlogs').set('Authorization', `Bearer ${token}`)
+        .send({"storyCardList" : "65692e449875534f7f22b190"})
         .expect(200)
         .end(function(err, res){
             if(err){
@@ -19,8 +32,8 @@ describe("Probar create de backlog", () => {
     
     it("Deberia de no crear un backlog", (done) => {
         supertest(app).post('/backlogs')
-        .send({})
-        .expect(200)
+        .send({"storyCardList" : "65692e449875534f7f22b190"})
+        .expect(401)
         .end(function(err, res){
             if(err){
                 done(err);
@@ -33,8 +46,7 @@ describe("Probar create de backlog", () => {
 
 describe("Probar get de backlog", () => {
     it("Deberia de obtener un backlog", (done) => {
-        supertest(app).get('/backlogs')
-        .send({})
+        supertest(app).get('/backlogs/65692e5a9875534f7f22b19a').set('Authorization', `Bearer ${token}`)
         .expect(200)
         .end(function(err, res){
             if(err){
@@ -46,9 +58,8 @@ describe("Probar get de backlog", () => {
     })
     
     it("Deberia de no obtener un backlog", (done) => {
-        supertest(app).get('/backlogs')
-        .send({})
-        .expect(200)
+        supertest(app).get('/backlogs/65692e5a9875534f7f22b19a')
+        .expect(401)
         .end(function(err, res){
             if(err){
                 done(err);
@@ -61,8 +72,7 @@ describe("Probar get de backlog", () => {
 
 describe("Probar get list de backlog", () => {
     it("Deberia de obtener una lista de backlogs", (done) => {
-        supertest(app).get('/backlogs')
-        .send({})
+        supertest(app).get('/backlogs/65692e5a9875534f7f22b19a').set('Authorization', `Bearer ${token}`)
         .expect(200)
         .end(function(err, res){
             if(err){
@@ -74,9 +84,8 @@ describe("Probar get list de backlog", () => {
     })
     
     it("Deberia de no obtener una lista de backlogs", (done) => {
-        supertest(app).get('/backlogs')
-        .send({})
-        .expect(200)
+        supertest(app).get('/backlogs/65692e5a9875534f7f22b19a')
+        .expect(401)
         .end(function(err, res){
             if(err){
                 done(err);
@@ -89,8 +98,8 @@ describe("Probar get list de backlog", () => {
 
 describe("Probar put backlog", () => {
     it("Deberia de modificar un atributo de un backlog", (done) => {
-        supertest(app).put('/backlogs')
-        .send({})
+        supertest(app).put('/backlogs/65692e5a9875534f7f22b19a').set('Authorization', `Bearer ${token}`)
+        .send({"storyCardList" : "65692f4e9875534f7f22b1a4"})
         .expect(200)
         .end(function(err, res){
             if(err){
@@ -102,9 +111,9 @@ describe("Probar put backlog", () => {
     })
     
     it("Deberia de no modificar un atributo de un backlog", (done) => {
-        supertest(app).put('/backlogs')
-        .send({})
-        .expect(200)
+        supertest(app).put('/backlogs/65692e5a9875534f7f22b19a')
+        .send({"storyCardList" : "65692f4e9875534f7f22b1a4"})
+        .expect(401)
         .end(function(err, res){
             if(err){
                 done(err);
@@ -117,8 +126,8 @@ describe("Probar put backlog", () => {
 
 describe("Probar patch backlog", () => {
     it("Deberia de actualizar un backlog", (done) => {
-        supertest(app).patch('/backlogs')
-        .send({})
+        supertest(app).patch('/backlogs/65692e5a9875534f7f22b19a').set('Authorization', `Bearer ${token}`)
+        .send({"storyCardList" : "65692f4e9875534f7f22b1a4"})
         .expect(200)
         .end(function(err, res){
             if(err){
@@ -130,9 +139,9 @@ describe("Probar patch backlog", () => {
     })
     
     it("Deberia de no actualizar un backlog", (done) => {
-        supertest(app).patch('/backlogs')
-        .send({})
-        .expect(200)
+        supertest(app).patch('/backlogs/65692e5a9875534f7f22b19a')
+        .send({"storyCardList" : "65692f4e9875534f7f22b1a4"})
+        .expect(401)
         .end(function(err, res){
             if(err){
                 done(err);
@@ -145,8 +154,7 @@ describe("Probar patch backlog", () => {
 
 describe("Probar delete backlog", () => {
     it("Deberia de eliminar un backlog", (done) => {
-        supertest(app).delete('/backlogs')
-        .send({})
+        supertest(app).delete('/backlogs/65692e5a9875534f7f22b19a').set('Authorization', `Bearer ${token}`)
         .expect(200)
         .end(function(err, res){
             if(err){
@@ -158,9 +166,8 @@ describe("Probar delete backlog", () => {
     })
     
     it("Deberia de no eliminar un backlog", (done) => {
-        supertest(app).delete('/backlogs')
-        .send({})
-        .expect(200)
+        supertest(app).delete('/backlogs/65692e5a9875534f7f22b19a')
+        .expect(401)
         .end(function(err, res){
             if(err){
                 done(err);
