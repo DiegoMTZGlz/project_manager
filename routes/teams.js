@@ -1,17 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/teams');
+const authMiddleware = require('../authMiddleware');
 
-router.post('/', controller.create)
+router.post('/', authMiddleware('teams', 'CREATE'), controller.create);
 
-router.get('/', controller.list);
+router.get('/', authMiddleware('teams', 'READ'), controller.list);
 
-router.get('/:id', controller.index);
+router.get('/:id', authMiddleware('teams', 'READ'), controller.index);
 
-router.put('/:id', controller.replace);
+router.put('/:id', authMiddleware('teams', 'UPDATE'), controller.replace);
 
-router.patch('/:id', controller.update);
+router.patch('/:id', authMiddleware('teams', 'UPDATE'), controller.update);
 
-router.delete('/:id', controller.destroy);
+router.delete('/:id', authMiddleware('teams', 'DELETE'), controller.destroy);
 
 module.exports = router;
