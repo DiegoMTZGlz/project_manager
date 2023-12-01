@@ -80,45 +80,9 @@ http://localhost:3000/
 
 5. Si se quiere apagar el servidor: `Ctrl + C`
 
-## Imagen de Docker
+## Back4App
 
-Para ejectuarlo desde una imagen de docker
-
-1. Descargar la imagen de docker:
-
-```
-docker pull docker pull diegomtzglz/project_manager
-```
-
-2. Crear el contenedor:
-
-```
-docker create --name <nombre_contenedor> -p 3000:3000 diegomtzglz/project_manager
-```
-
-3. Iniciar el contenedor:
-
-```
-docker start <nombre_contenedor>
-```
-
-4. Pausar el contenedor:
-
-```
-docker stop <nombre_contenedor>
-```
-
-Para hacer los ultimos comandos en uno solo:
-
-```
-docker run -p 3000:3000 diegomtzglz/project_manager
-```
-
-Link de DockerHub:
-
-```
-https://hub.docker.com/r/diegomtzglz/project_manager
-```
+- **Link** - [Back4App](https://videoclub-olxlme8c.b4a.run/)
 
 ## Descripción del Diagrama de Clases
 
