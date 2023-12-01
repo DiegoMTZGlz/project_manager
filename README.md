@@ -1,10 +1,10 @@
-## Proyecto Reto I. Desarrollar un Manejador de Proyectos
+## Proyecto reto II: Desarrollar un manejador de proyectos
 
 Web Platforms
 
-## Unidad I
+## Unidad II
 
-Introducción al Desarrollo Web
+Programación web del lado del servidor
 
 ## Lenguaje de Programación
 
