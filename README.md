@@ -152,7 +152,7 @@ Las palabras que estan dentro de un recuadro representan `clases` y las que esta
 
 ![diagramaDeClases](./Diagramas/project_challenge_web_platforms.jpg)
 
-## Descripción del Diagrama de Interacción
+## Descripción del Diagrama de Secuencia
 
 La funcionalidad de la plataforma ha sido plasmada en el diagrama acorde a los siguientes puntos:
 
@@ -170,6 +170,12 @@ La funcionalidad de la plataforma ha sido plasmada en el diagrama acorde a los s
 
 • Revisión de proyectos con sus respectivas tarjetas.
 
-`Diagrama de Interacción`
+• Implementación de componentes de seguridad (JWT).
 
-![diagramaDeInteracción](./Diagramas/Diagrama_de_interacciòn.jpg)
+• Internacionalización.
+
+• Comunicación con el PaaS de Mongodb Atlas.
+
+`Diagrama de Secuencia`
+
+![diagramaDeSecuencia](./Diagramas/Diagrama_de_secuencia.jpg)
